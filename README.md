@@ -1,2 +1,1 @@
-# C.A.S.E
-A macropad with 8 buttons and a rotary encoder powered by a Esp32-s3
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=&pause=1000&color=F7F7F7&width=435&lines=C.A.S.E)](https://git.io/typing-svg)
