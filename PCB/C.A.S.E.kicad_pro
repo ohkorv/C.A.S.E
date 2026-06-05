@@ -162,7 +162,7 @@
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -559,6 +559,10 @@
       {
         "netclass": "Thickboys",
         "pattern": "VBAT"
+      },
+      {
+        "netclass": "Thickboys",
+        "pattern": "+3.3V"
       }
     ]
   },
@@ -566,7 +570,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../Gerber Files/",
       "specctra_dsn": "",
       "vrml": ""
     },
