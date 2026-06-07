@@ -746,15 +746,15 @@
 			(uuid "2e0667d7-c000-48d7-8d45-6647e9350e58")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Rotary_Encoder.3dshapes/RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/EC11 Rotary Encoder Dode Switch-15mm .STEP"
 			(offset
-				(xyz 0 0 0)
+				(xyz 7.5 -2.5 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 90)
 			)
 		)
 		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/EC11 Rotary Encoder Dode Switch-15mm .STEP"
@@ -1229,7 +1229,7 @@
 			(uuid "3b8534fb-b6c5-47ec-8881-7675ca795c77")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5.5 10)
 			)
@@ -1240,7 +1240,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -1689,7 +1689,7 @@
 			(uuid "3e94e66c-0458-4777-abf7-31eeadd24055")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5 10)
 			)
@@ -1700,7 +1700,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -2660,7 +2660,7 @@
 			(uuid "f7a3f325-c94f-4f7d-99cc-a95b7de5691b")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5 9.5)
 			)
@@ -2671,7 +2671,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -3315,7 +3315,7 @@
 			(uuid "4b4b4113-0669-40fb-81c8-3bf2bd8ca490")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5 10)
 			)
@@ -3326,7 +3326,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -3579,7 +3579,7 @@
 			(uuid "01340c68-3819-4711-b15f-f0ba99356043")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5 10)
 			)
@@ -3590,7 +3590,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -3843,7 +3843,7 @@
 			(uuid "dd970699-22a0-4ea4-8ed3-cff3b66590b3")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5 10)
 			)
@@ -3854,7 +3854,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -5402,7 +5402,7 @@
 			(uuid "2f155366-baa2-4eda-bd10-e8d8af1fbfee")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5 10)
 			)
@@ -5413,7 +5413,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -5786,7 +5786,7 @@
 			(uuid "cf60e785-9251-4081-ab89-adfc189de5ef")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/1x1 R1.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/1x1 R1.step"
 			(offset
 				(xyz -2.5 -5 10)
 			)
@@ -5797,7 +5797,7 @@
 				(xyz -90 -0 -0)
 			)
 		)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/Kailh Polia.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/Kailh Polia.step"
 			(offset
 				(xyz -2.5 -5 3.5)
 			)
@@ -7322,7 +7322,7 @@
 			(uuid "6692995d-9ca5-4142-a8d6-39d056935927")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/ESP32-S3-WROOM-1-N16R8.STEP"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/ESP32-S3-WROOM-1-N16R8.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7706,7 +7706,7 @@
 			(uuid "4c6261a3-4c02-4874-a04c-5de33b1662e9")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/434121025816.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/434121025816.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7925,7 +7925,7 @@
 			(uuid "714760ac-639b-4f0c-87f6-df17f2ef933b")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/434121025816.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/434121025816.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8263,7 +8263,7 @@
 			(uuid "a7dd6789-6c63-43bc-a241-19580092a492")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/TLV1117-33IDCY.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/TLV1117-33IDCY.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9326,7 +9326,7 @@
 			(uuid "cd7c4afd-354b-4b1e-be1e-b6448aa756c1")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/korven/Documents/C.A.S.E/3D Models/CQ-USB-C16PSMT01.step"
+		(model "C:/Users/korven/Documents/C.A.S.E/Libs/3D Models/CQ-USB-C16PSMT01.step"
 			(offset
 				(xyz 0 -3.5 0)
 			)
