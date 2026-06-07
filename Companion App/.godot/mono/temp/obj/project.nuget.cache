@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "iK4if3+FPcQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\korven\\Documents\\C.A.S.E\\Companion App\\ArcHUB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\korven\\.nuget\\packages\\godot.sourcegenerators\\4.6.3\\godot.sourcegenerators.4.6.3.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\godotsharp\\4.6.3\\godotsharp.4.6.3.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\godotsharpeditor\\4.6.3\\godotsharpeditor.4.6.3.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\runtime.native.system.io.ports\\8.0.0\\runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\system.io.ports\\8.0.0\\system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\korven\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}

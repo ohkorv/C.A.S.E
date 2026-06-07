@@ -1,0 +1,336 @@
+[gd_scene format=3 uid="uid://rr24y4jtw2wa"]
+
+[ext_resource type="PackedScene" uid="uid://3vedrqdvbckc" path="res://scenes/Blurbackground.tscn" id="2_khv74"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_lelwj"]
+script/source = "using Godot;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+public partial class FileTransfer : Godot.Control
+{
+	[Export] public Godot.NodePath DropZonePath;
+	[Export] public Godot.NodePath FileListPath;
+	[Export] public Godot.NodePath SendButtonPath;
+	[Export] public Godot.NodePath TransferStatusLabelPath;
+	[Export] public Godot.NodePath TransferProgressBarPath;
+
+	private Godot.Panel _dropZone;
+	private Godot.VBoxContainer _fileList;
+	private Godot.Button _sendButton;
+	private Godot.Label _transferStatusLabel;
+	private Godot.ProgressBar _transferProgressBar;
+
+	private List<(string Path, long Size)> _filesToSend = new();
+
+	public override void _Ready()
+	{
+		_dropZone = GetNode<Godot.Panel>(DropZonePath);
+		_fileList = GetNode<Godot.VBoxContainer>(FileListPath);
+		_sendButton = GetNode<Godot.Button>(SendButtonPath);
+		_transferStatusLabel = GetNode<Godot.Label>(TransferStatusLabelPath);
+		_transferProgressBar = GetNode<Godot.ProgressBar>(TransferProgressBarPath);
+
+		_sendButton.Pressed += OnSendPressed;
+		_sendButton.Disabled = true;
+		_transferProgressBar.Visible = false;
+		_dropZone.GuiInput += OnDropZoneInput;
+	}
+
+	private void OnDropZoneInput(Godot.InputEvent @event)
+	{
+		if (@event is InputEventMouseButton mb && mb.Pressed && mb.ButtonIndex == MouseButton.Left)
+			OpenFileDialog();
+	}
+
+	private void OpenFileDialog()
+	{
+		var psi = new ProcessStartInfo
+		{
+			FileName = \"powershell\",
+			Arguments = \"-NoProfile -Command \\\"Add-Type -AssemblyName System.Windows.Forms; $f = New-Object System.Windows.Forms.OpenFileDialog; $f.Multiselect = $true; $f.Filter = 'FLAC Audio (*.flac)|*.flac|All Files (*.*)|*.*'; $f.ShowDialog() | Out-Null; $f.FileNames -join '|'\\\"\",
+			RedirectStandardOutput = true,
+			UseShellExecute = false,
+			CreateNoWindow = true
+		};
+
+		var process = Process.Start(psi);
+		string output = process.StandardOutput.ReadToEnd().Trim();
+		process.WaitForExit();
+
+		if (!string.IsNullOrEmpty(output))
+		{
+			foreach (var path in output.Split('|'))
+			{
+				if (!string.IsNullOrEmpty(path))
+					AddFile(path.Trim());
+			}
+		}
+	}
+
+	private void AddFile(string path)
+	{
+		foreach (var f in _filesToSend)
+			if (f.Path == path) return;
+
+		var size = new FileInfo(path).Length;
+		_filesToSend.Add((path, size));
+
+		var row = new Godot.HBoxContainer();
+
+		var nameLabel = new Godot.Label();
+		nameLabel.Text = System.IO.Path.GetFileName(path);
+		nameLabel.SizeFlagsHorizontal = Godot.Control.SizeFlags.ExpandFill;
+
+		var sizeLabel = new Godot.Label();
+		sizeLabel.Text = FormatSize(size);
+
+		var removeBtn = new Godot.Button();
+		removeBtn.Text = \"X\";
+		removeBtn.Pressed += () => RemoveFile(path, row);
+
+		row.AddChild(nameLabel);
+		row.AddChild(sizeLabel);
+		row.AddChild(removeBtn);
+		_fileList.AddChild(row);
+
+		_sendButton.Disabled = false;
+	}
+
+	private void RemoveFile(string path, Godot.HBoxContainer row)
+	{
+		_filesToSend.RemoveAll(f => f.Path == path);
+		row.QueueFree();
+		if (_filesToSend.Count == 0)
+			_sendButton.Disabled = true;
+	}
+
+	private async void OnSendPressed()
+	{
+		string drive = FindEspDrive();
+		if (drive == \"\")
+		{
+			_transferStatusLabel.Text = \"Device not found\";
+			return;
+		}
+
+		_sendButton.Disabled = true;
+		_transferProgressBar.Visible = true;
+		_transferProgressBar.Value = 0;
+
+		int total = _filesToSend.Count;
+		int done = 0;
+
+		foreach (var f in _filesToSend)
+		{
+			string filename = System.IO.Path.GetFileName(f.Path);
+			_transferStatusLabel.Text = \"Sending: \" + filename;
+
+			string destDir = drive + \"/music\";
+			string dest = destDir + \"/\" + filename;
+
+			await Task.Run(() =>
+			{
+				Directory.CreateDirectory(destDir);
+				File.Copy(f.Path, dest, true);
+			});
+
+			done++;
+			_transferProgressBar.Value = (float)done / total * 100f;
+		}
+
+		_transferStatusLabel.Text = \"Done! Sent \" + total + \" file(s)\";
+		_sendButton.Disabled = false;
+
+		await ToSignal(GetTree().CreateTimer(2.0f), \"timeout\");
+		_transferProgressBar.Visible = false;
+	}
+
+	private string FindEspDrive()
+	{
+		foreach (var drive in DriveInfo.GetDrives())
+		{
+			if (drive.DriveType == DriveType.Removable && drive.IsReady)
+				return drive.Name.TrimEnd('\\\\');
+		}
+		return \"\";
+	}
+
+	private string FormatSize(long size)
+	{
+		if (size < 1024) return size + \" B\";
+		if (size < 1024 * 1024) return size / 1024 + \" KB\";
+		return $\"{(float)size / (1024f * 1024f):0.0} MB\";
+	}
+}
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcker"]
+bg_color = Color(0.6, 0.6, 0.6, 0.39607844)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m441t"]
+bg_color = Color(0.6, 0.6, 0.6, 0.39607844)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Control" type="Control" unique_id=63633694]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("CSharpScript_lelwj")
+DropZonePath = NodePath("")
+FileListPath = NodePath("")
+SendButtonPath = NodePath("")
+TransferStatusLabelPath = NodePath("")
+TransferProgressBarPath = NodePath("")
+
+[node name="MainWindow" parent="." unique_id=1810955630 instance=ExtResource("2_khv74")]
+layout_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1672544242]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -84.0
+offset_right = -1.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="Button9" type="Button" parent="." unique_id=2115686789]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 90.0
+offset_top = -173.0
+offset_right = 170.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_m441t")
+
+[node name="Button8" type="Button" parent="." unique_id=1475645123]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -41.0
+offset_right = -88.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="Button6" type="Button" parent="." unique_id=1619657665]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -173.0
+offset_right = 41.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="Button4" type="Button" parent="." unique_id=1518900292]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="Button2" type="Button" parent="." unique_id=1991235846]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -84.0
+offset_right = 83.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="Button7" type="Button" parent="." unique_id=1683058725]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = 89.0
+offset_right = 42.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="Button3" type="Button" parent="." unique_id=1692268868]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 83.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="Button5" type="Button" parent="." unique_id=1868761184]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 94.0
+offset_top = -42.0
+offset_right = 174.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")

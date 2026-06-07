@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://3vedrqdvbckc"]
+
+[ext_resource type="Script" uid="uid://bt33rs3x5g0x4" path="res://scripts/MainWindow.cs" id="1_n7l54"]
+
+[node name="MainWindow" type="Control" unique_id=1810955630]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n7l54")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=212268560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.050980393)
