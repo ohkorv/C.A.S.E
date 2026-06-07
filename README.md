@@ -20,3 +20,10 @@ A sleek looking macropad
 
 
 </div>
+
+<div align="center">
+
+  <img width="1080" height="724" alt="frontfisheye" src="https://github.com/user-attachments/assets/a8ccbd67-ca84-4dd2-a66f-6d1dfa55c6cb" />
+
+
+</div>
