@@ -1,27 +1,30 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780857108
-export_presets.cfg::TextFile::-1::1779640318::0::1::::<><><>0<>0<><>::
-::res://effects/::1780857059
-topbar.tscn::PackedScene::1074711946387080339::1779636432::0::1::::<><><>0<>0<><>::uid://bt33rs3x5g0x4::::res://scripts/MainWindow.cs<>uid://bmfuqi4i1jcrh::::res://scripts/draggable.gd
-::res://export/::1780781172
-export_presets.cfg::TextFile::-1::1779611080::0::1::::<><><>0<>0<><>::
-::res://font/::1780781172
-Avenir Regular.ttf::FontFile::4027317759499887095::1779566318::1779566324::1::::<><><>0<>0<>0c441eefe940754c550953e2cdd04179<>res://.godot/imported/Avenir Regular.ttf-5ebf39eeb0a869c2fa7caa55189f6ead.fontdata::
-::res://images/::1780857059
-11644151_-rocky-project-hail-mary-stl-file-for-3d-printing--removebg-preview.png::CompressedTexture2D::5649682886935919677::1779295564::1779610961::1::::<><><>0<>0<>cc3125239edcaf7f946c7ed17e7db315<>res://.godot/imported/11644151_-rocky-project-hail-mary-stl-file-for-3d-printing--removebg-preview.png-de103ebfaece9925814343650b613625.ctex::
-Nytt projekt.png::CompressedTexture2D::2900740879676921956::1780781642::1780857109::1::::<><><>0<>0<>ebd5aca64f4be3092f94eca0d2794d10<>res://.godot/imported/Nytt projekt.png-f5ea8e9be32864067041f6bc286dd1cc.ctex::
-solar--settings-bold (3).svg::CompressedTexture2D::6717036042663975619::1779630763::1779630874::1::::<><><>0<>0<>9c45f882b459322c8c44506abe8a984b<>res://.godot/imported/solar--settings-bold (3).svg-1324098c9376fe04102a7b16e237fb8d.ctex::
-::res://images/C.A.S.E/::1780831413
-c.a.s.e.svg::CompressedTexture2D::4836288917379837564::1780830526::1780831413::1::::<><><>0<>0<>14ce910b871b93a652022c34cbf4c188<>res://.godot/imported/c.a.s.e.svg-6bf6b6cf51a849ff134e77b8d9352573.ctex::
-frontfisheye-removebg-preview.png::CompressedTexture2D::8356449428886862320::1780831012::1780831151::1::::<><><>0<>0<>2a47dc88fe35eafaba22592d59abfe97<>res://.godot/imported/frontfisheye-removebg-preview.png-bda1912d55ecec93002c4e3f8e678e47.ctex::
-::res://images/C.O.R.E/::1780857059
-c.o.r.e.svg::CompressedTexture2D::7694392334645019373::1780831398::1780857109::1::::<><><>0<>0<>d2b0c520dfe66b8f2774999ce68886a5<>res://.godot/imported/c.o.r.e.svg-6ca0a161457285d8465c7e8897bf857f.ctex::
-Nytt projekt (2).svg::CompressedTexture2D::5425429989450095920::1780833100::1780833106::1::::<><><>0<>0<>263d507016d67a21c326fd90d3d5a3fc<>res://.godot/imported/Nytt projekt (2).svg-87a088a92057b3910b5b1ffed97cebd1.ctex::
-::res://scenes/::1780833563
-Blurbackground.tscn::PackedScene::2008888697831176982::1780833210::0::1::::<><><>0<>0<><>::uid://bt33rs3x5g0x4::::res://scripts/MainWindow.cs
-MainWindow.tscn::PackedScene::1229997216288440600::1780833563::0::1::::<><><>0<>0<><>::uid://3vedrqdvbckc::::res://scenes/Blurbackground.tscn
-TopBar.tscn::PackedScene::7063619279130136980::1780831831::0::1::::<><><>0<>0<><>::uid://bt33rs3x5g0x4::::res://scripts/MainWindow.cs
-::res://scripts/::1780833563
-MainWindow.cs::CSharpScript::3779542713983430911::1780833563::0::1::::<>Control<><>0<>0<><>::
-::res://shaders/::1780857059
-control.gdshader::Shader::8374795966115408672::1780830537::0::1::::<><><>0<>0<><>::
+::res://::1780947177
+export_presets.cfg::TextFile::-1::1780903374::0::1::::<><><>0<>0<><>::
+::res://effects/::1780903394
+topbar.tscn::PackedScene::1074711946387080339::1780903379::0::1::::<><><>0<>0<><>::uid://bt33rs3x5g0x4::::res://scripts/MainWindow.cs<>uid://bmfuqi4i1jcrh::::res://scripts/draggable.gd
+::res://export/::1780903394
+export_presets.cfg::TextFile::-1::1780903379::0::1::::<><><>0<>0<><>::
+::res://font/::1780903394
+Avenir Regular.ttf::FontFile::4027317759499887095::1780903379::1780903379::1::::<><><>0<>0<>0c441eefe940754c550953e2cdd04179<>res://.godot/imported/Avenir Regular.ttf-5ebf39eeb0a869c2fa7caa55189f6ead.fontdata::
+::res://images/::1780904076
+11644151_-rocky-project-hail-mary-stl-file-for-3d-printing--removebg-preview.png::CompressedTexture2D::5649682886935919677::1780903379::1780903379::1::::<><><>0<>0<>cc3125239edcaf7f946c7ed17e7db315<>res://.godot/imported/11644151_-rocky-project-hail-mary-stl-file-for-3d-printing--removebg-preview.png-de103ebfaece9925814343650b613625.ctex::
+heroicons--play-pause-solid (1).svg::CompressedTexture2D::3369024255023466746::1780904028::1780904028::1::::<><><>0<>0<>fdae49f3258083ce81ab595ce0a5aa5e<>res://.godot/imported/heroicons--play-pause-solid (1).svg-8cf3226172414608baee3f3dd0b52c16.ctex::
+heroicons--play-pause-solid.png::CompressedTexture2D::3558825536845343204::1780904076::1780904076::1::::<><><>0<>0<>b65a023a2292b78028303e98dd72b462<>res://.godot/imported/heroicons--play-pause-solid.png-02b9912545e4ed891f21f39c35593d98.ctex::
+Nytt projekt.png::CompressedTexture2D::2900740879676921956::1780903379::1780903379::1::::<><><>0<>0<>ebd5aca64f4be3092f94eca0d2794d10<>res://.godot/imported/Nytt projekt.png-f5ea8e9be32864067041f6bc286dd1cc.ctex::
+solar--settings-bold (3).svg::CompressedTexture2D::6717036042663975619::1780903379::1780903379::1::::<><><>0<>0<>9c45f882b459322c8c44506abe8a984b<>res://.godot/imported/solar--settings-bold (3).svg-1324098c9376fe04102a7b16e237fb8d.ctex::
+::res://images/C.A.S.E/::1780903394
+c.a.s.e.svg::CompressedTexture2D::4836288917379837564::1780903379::1780903379::1::::<><><>0<>0<>14ce910b871b93a652022c34cbf4c188<>res://.godot/imported/c.a.s.e.svg-6bf6b6cf51a849ff134e77b8d9352573.ctex::
+frontfisheye-removebg-preview.png::CompressedTexture2D::8356449428886862320::1780903379::1780903379::1::::<><><>0<>0<>2a47dc88fe35eafaba22592d59abfe97<>res://.godot/imported/frontfisheye-removebg-preview.png-bda1912d55ecec93002c4e3f8e678e47.ctex::
+::res://images/C.O.R.E/::1780903394
+c.o.r.e.svg::CompressedTexture2D::7694392334645019373::1780903379::1780903379::1::::<><><>0<>0<>d2b0c520dfe66b8f2774999ce68886a5<>res://.godot/imported/c.o.r.e.svg-6ca0a161457285d8465c7e8897bf857f.ctex::
+Nytt projekt (2).svg::CompressedTexture2D::5425429989450095920::1780903379::1780903379::1::::<><><>0<>0<>263d507016d67a21c326fd90d3d5a3fc<>res://.godot/imported/Nytt projekt (2).svg-87a088a92057b3910b5b1ffed97cebd1.ctex::
+::res://scenes/::1780904410
+Blurbackground.tscn::PackedScene::2008888697831176982::1780903379::0::1::::<><><>0<>0<><>::uid://bt33rs3x5g0x4::::res://scripts/MainWindow.cs
+button_assigner.gd::GDScript::4804347673445944383::1780904346::0::1::::<>Control<><>0<>0<><>::
+MainWindow.tscn::PackedScene::1229997216288440600::1780904410::0::1::::<><><>0<>0<><>::uid://capi50k7c4udb::::res://scenes/button_assigner.gd<>uid://3vedrqdvbckc::::res://scenes/Blurbackground.tscn<>uid://bqx6lpflnfb3q::::res://images/heroicons--play-pause-solid.png<>uid://c7vw1o2vn3nvg::::res://scenes/TopBar.tscn
+TopBar.tscn::PackedScene::7063619279130136980::1780903379::0::1::::<><><>0<>0<><>::uid://bt33rs3x5g0x4::::res://scripts/MainWindow.cs
+::res://scripts/::1780903394
+MainWindow.cs::CSharpScript::3779542713983430911::1780903379::0::1::::<>Control<><>0<>0<><>::
+::res://shaders/::1780903394
+control.gdshader::Shader::8374795966115408672::1780903379::0::1::::<><><>0<>0<><>::

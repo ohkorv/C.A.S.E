@@ -1,9 +1,9 @@
 Button
+Control
 Label
 ProgressBar
 VBoxContainer
 Panel
-Control
 Timer
 ColorRect
 VScrollBar

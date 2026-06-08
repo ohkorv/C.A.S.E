@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://rr24y4jtw2wa"]
 
+[ext_resource type="Script" uid="uid://capi50k7c4udb" path="res://scenes/button_assigner.gd" id="1_khv74"]
 [ext_resource type="PackedScene" uid="uid://3vedrqdvbckc" path="res://scenes/Blurbackground.tscn" id="2_khv74"]
+[ext_resource type="Texture2D" uid="uid://bqx6lpflnfb3q" path="res://images/heroicons--play-pause-solid.png" id="2_lelwj"]
+[ext_resource type="PackedScene" uid="uid://c7vw1o2vn3nvg" path="res://scenes/TopBar.tscn" id="2_m441t"]
 
 [sub_resource type="CSharpScript" id="CSharpScript_lelwj"]
 script/source = "using Godot;
@@ -200,137 +203,162 @@ TransferProgressBarPath = NodePath("")
 [node name="MainWindow" parent="." unique_id=1810955630 instance=ExtResource("2_khv74")]
 layout_mode = 1
 
-[node name="Button" type="Button" parent="." unique_id=1672544242]
+[node name="ButtonAssigner" type="Control" parent="." unique_id=1863318444 node_paths=PackedStringArray("middle_buttons", "right_buttons")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_khv74")
+middle_buttons = [NodePath("GPIO 1"), NodePath("GPIO 8"), NodePath("GPIO 3"), NodePath("GPIO 4"), NodePath("GPIO 5"), NodePath("GPIO 6"), NodePath("GPIO 7"), NodePath("GPIO 8"), NodePath("Rotary Encoder")]
+right_buttons = [NodePath("RightBar/Button")]
+
+[node name="GPIO 1" type="Button" parent="ButtonAssigner" unique_id=1672544242]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -84.0
-offset_right = -1.0
-offset_bottom = -4.0
+offset_left = 539.0
+offset_top = 276.0
+offset_right = 619.0
+offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
 
-[node name="Button9" type="Button" parent="." unique_id=2115686789]
+[node name="Rotary Encoder" type="Button" parent="ButtonAssigner" unique_id=2115686789]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
-offset_top = -173.0
-offset_right = 170.0
-offset_bottom = -93.0
+offset_left = 710.0
+offset_top = 187.0
+offset_right = 790.0
+offset_bottom = 267.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_m441t")
 
-[node name="Button8" type="Button" parent="." unique_id=1475645123]
+[node name="GPIO 8" type="Button" parent="ButtonAssigner" unique_id=1475645123]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -168.0
-offset_top = -41.0
-offset_right = -88.0
-offset_bottom = 39.0
+offset_left = 452.0
+offset_top = 319.0
+offset_right = 532.0
+offset_bottom = 399.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
 
-[node name="Button6" type="Button" parent="." unique_id=1619657665]
+[node name="GPIO 5" type="Button" parent="ButtonAssigner" unique_id=1619657665]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = -173.0
-offset_right = 41.0
-offset_bottom = -93.0
+offset_left = 581.0
+offset_top = 187.0
+offset_right = 661.0
+offset_bottom = 267.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
 
-[node name="Button4" type="Button" parent="." unique_id=1518900292]
+[node name="GPIO 3" type="Button" parent="ButtonAssigner" unique_id=1518900292]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = 1.0
-offset_right = -1.0
-offset_bottom = 81.0
+offset_left = 539.0
+offset_top = 361.0
+offset_right = 619.0
+offset_bottom = 441.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
 
-[node name="Button2" type="Button" parent="." unique_id=1991235846]
+[node name="GPIO 2" type="Button" parent="ButtonAssigner" unique_id=1991235846]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 3.0
-offset_top = -84.0
-offset_right = 83.0
-offset_bottom = -4.0
+offset_left = 623.0
+offset_top = 276.0
+offset_right = 703.0
+offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
 
-[node name="Button7" type="Button" parent="." unique_id=1683058725]
+[node name="GPIO 7" type="Button" parent="ButtonAssigner" unique_id=1683058725]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.0
-offset_top = 89.0
-offset_right = 42.0
-offset_bottom = 169.0
+offset_left = 582.0
+offset_top = 449.0
+offset_right = 662.0
+offset_bottom = 529.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
 
-[node name="Button3" type="Button" parent="." unique_id=1692268868]
+[node name="GPIO 4" type="Button" parent="ButtonAssigner" unique_id=1692268868]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 3.0
-offset_top = 1.0
-offset_right = 83.0
-offset_bottom = 81.0
+offset_left = 623.0
+offset_top = 361.0
+offset_right = 703.0
+offset_bottom = 441.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
 
-[node name="Button5" type="Button" parent="." unique_id=1868761184]
+[node name="GPIO 6" type="Button" parent="ButtonAssigner" unique_id=1868761184]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 94.0
-offset_top = -42.0
-offset_right = 174.0
-offset_bottom = 38.0
+offset_left = 714.0
+offset_top = 318.0
+offset_right = 794.0
+offset_bottom = 398.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vcker")
+
+[node name="RightBar" parent="ButtonAssigner" unique_id=198014316 instance=ExtResource("2_m441t")]
+layout_mode = 1
+offset_left = 1066.0
+offset_top = -12.0
+offset_right = 1279.0
+offset_bottom = 742.0
+
+[node name="Button" type="Button" parent="ButtonAssigner/RightBar" unique_id=1296708249]
+layout_mode = 0
+offset_top = 13.0
+offset_right = 3836.3633
+offset_bottom = 533.0
+scale = Vector2(0.055, 0.055)
+icon = ExtResource("2_lelwj")

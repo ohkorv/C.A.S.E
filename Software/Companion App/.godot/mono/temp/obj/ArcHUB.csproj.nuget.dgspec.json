@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\korven\\Documents\\C.A.S.E\\Companion App\\ArcHUB.csproj": {}
+    "C:\\Users\\korven\\Documents\\C.A.S.E\\Software\\Companion App\\ArcHUB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\korven\\Documents\\C.A.S.E\\Companion App\\ArcHUB.csproj": {
+    "C:\\Users\\korven\\Documents\\C.A.S.E\\Software\\Companion App\\ArcHUB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\korven\\Documents\\C.A.S.E\\Companion App\\ArcHUB.csproj",
+        "projectUniqueName": "C:\\Users\\korven\\Documents\\C.A.S.E\\Software\\Companion App\\ArcHUB.csproj",
         "projectName": "ArcHUB",
-        "projectPath": "C:\\Users\\korven\\Documents\\C.A.S.E\\Companion App\\ArcHUB.csproj",
+        "projectPath": "C:\\Users\\korven\\Documents\\C.A.S.E\\Software\\Companion App\\ArcHUB.csproj",
         "packagesPath": "C:\\Users\\korven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\korven\\Documents\\C.A.S.E\\Companion App\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\korven\\Documents\\C.A.S.E\\Software\\Companion App\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

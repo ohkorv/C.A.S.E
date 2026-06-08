@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArcHUB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9991361fb8002978941aabc269fc1de2c0f0429")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e54cf52071f3f625a6e5ac4f0c40a93d127113f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArcHUB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArcHUB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iK4if3+FPcQ=",
+  "dgSpecHash": "OzsuUWOgpbw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\korven\\Documents\\C.A.S.E\\Companion App\\ArcHUB.csproj",
+  "projectFilePath": "C:\\Users\\korven\\Documents\\C.A.S.E\\Software\\Companion App\\ArcHUB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\korven\\.nuget\\packages\\godot.sourcegenerators\\4.6.3\\godot.sourcegenerators.4.6.3.nupkg.sha512",
     "C:\\Users\\korven\\.nuget\\packages\\godotsharp\\4.6.3\\godotsharp.4.6.3.nupkg.sha512",
