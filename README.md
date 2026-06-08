@@ -53,6 +53,10 @@ Building the app is simple, just simply download it and download godot .net with
 <img width="1205" height="697" alt="image" src="https://github.com/user-attachments/assets/6a8d6606-688a-4725-937a-5b030e077d72" />
 <img width="946" height="879" alt="image" src="https://github.com/user-attachments/assets/c9d2c1e3-774d-461f-8858-f48f73017f57" />
 <img width="1092" height="759" alt="image" src="https://github.com/user-attachments/assets/a414f4d4-33f3-4138-9459-c9cc484ba674" />
+<img width="992" height="936" alt="image" src="https://github.com/user-attachments/assets/4bc6cdbe-b9bc-4c6b-84d8-0edc4cc5317c" />
+<img width="996" height="963" alt="image" src="https://github.com/user-attachments/assets/46271ac3-3e98-44e1-9f9e-b97c3f1f7c6a" />
+
+
 
 
 
