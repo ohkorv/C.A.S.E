@@ -43,7 +43,7 @@ C.A.S.E is a custom macropad made to fit my needs. It has 8 Baby Kangaroo Cherry
 - `Software/MacroPad software`  Code to be put on the C.A.S.E
 
 # Software Features
-It has a easy to use companion app and is simple to setup. You simply assign actions to buttons. And have a python script running in the background
+It has a easy to use companion app and is simple to setup. You simply assign actions to buttons. And have a python script running in the background.
 Building the app is simple, just simply download it and download godot .net with it. Then compile it in the app. There are plenty of tutorials online if you are unsure
 
 # Photo Gallery
